@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
+{/*Reutilizamos codigo de listar */ }
 
 export const Eliminar = () => {
     const obtenerRegistros = () => {
@@ -17,7 +17,9 @@ export const Eliminar = () => {
 
     const [registroslogin, setRegistrosLogin] = useState(obtenerRegistros());
 
+    {/*Creamos la funcion para el boton eliminar */ }
     const botonEliminar = (miIndex) => {
+        {/*Preguntamos si está seguro de eliminar al usuario*/ }
         if (window.confirm("Está seguro que desea eliminar a este usuario")) {
             var registrosFiltrados = registroslogin.filter((e, index) => {
                 return miIndex !== index

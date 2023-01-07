@@ -15,7 +15,7 @@ export const Listar = () => {
 
 
     }
-    {/*obetenemos los datos que tenemos en el local Storage*/ }
+    {/*obtenemos los datos que tenemos en el local Storage*/ }
     const [registroslogin] = useState(obtenerRegistros());
 
 
