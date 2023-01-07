@@ -46,7 +46,7 @@ export const Eliminar = () => {
 
                 <>
                     <table className="table table-bordered table-hover" style={{ marginTop: 12 }}>
-                        <thead className="text-center" style={{ background: "lightgray" }}>
+                        <thead className="text-center" style={{ background: "yellow" }}>
                             <tr>
                                 <th>#</th>
                                 <th>Nombres</th>
@@ -72,19 +72,14 @@ export const Eliminar = () => {
                                             </button>
                                         </td>
 
-
                                     </tr>
 
                                 ))
-
-
 
                             }
                         </tbody>
                     </table>
                 </>
-
-
 
             </div>
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 
 export const Listar = () => {
+    {/*Reutilizamos el codigo de registrar para retornar los datos*/ }
     const obtenerRegistros = () => {
         var datos = localStorage.getItem("registroslogin");
         if (datos) {
@@ -14,7 +15,7 @@ export const Listar = () => {
 
 
     }
-
+    {/*obetenemos los datos que tenemos en el local Storage*/ }
     const [registroslogin] = useState(obtenerRegistros());
 
 
@@ -33,11 +34,9 @@ export const Listar = () => {
 
             <div className="table-responsive">
 
-
-
                 <>
                     <table className="table table-bordered table-hover" style={{ marginTop: 12 }}>
-                        <thead className="text-center" style={{ background: "lightgray" }}>
+                        <thead className="text-center" style={{ background: "yellow" }}>
                             <tr>
                                 <th>#</th>
                                 <th>Nombres</th>
@@ -47,6 +46,7 @@ export const Listar = () => {
                             </tr>
                         </thead>
                         <tbody className="text-center align-baseline">
+                            {/*Aca recuperamos un elemento por cada iteracion y creamos la tabla*/}
                             {
                                 registroslogin.map((x, index) => (
                                     <tr key={index}>
@@ -55,9 +55,6 @@ export const Listar = () => {
                                         <td>{x.apellidos}</td>
                                         <td>{x.tipodoc}</td>
                                         <td>{x.numdoc}</td>
-
-
-
                                     </tr>
 
                                 ))
@@ -66,9 +63,6 @@ export const Listar = () => {
                         </tbody>
                     </table>
                 </>
-
-
-
             </div>
 
         </div>
