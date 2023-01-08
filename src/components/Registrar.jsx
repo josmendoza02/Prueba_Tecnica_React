@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react'
 
 
@@ -75,7 +73,7 @@ export const Registrar = () => {
         <div className="bg-light" style={{ marginTop: 20, padding: 20 }}>
 
             <div className="h3">
-                Registrar Usuarios
+                Register Users
                 <br />
                 {/*Aca llamos a la funcion guardar y se la asignamos al boton*/}
                 <form id="miFormulario" onSubmit={botonGuardar} >
@@ -83,32 +81,32 @@ export const Registrar = () => {
                     <div className="row" style={{ marginTop: 20 }}>
 
                         <div className="col-6">
-                            <input id="nom" className="form-control form-control-lg text-center" type="text" placeholder="Nombres" onChange={(e) => setNombres(e.target.value)} required />
+                            <input id="nom" className="form-control form-control-lg text-center" type="text" placeholder="First Name" onChange={(e) => setNombres(e.target.value)} required />
                         </div>
 
                         <div className="col-6">
                             <select className="form-select form-select-lg text-center" onChange={(e) => setTipoDoc(e.target.value)} required  >
-                                <option value="">Tipo de Documento</option>
+                                <option value="">Document Type</option>
                                 <option value="cc">CC</option>
                                 <option value="ti">TI</option>
-                                <option value="pasaporte">Pasaporte</option>
+                                <option value="pasaporte">Passport</option>
                             </select>
                         </div>
                     </div>
 
                     <div className="row" style={{ marginTop: 20 }}>
                         <div className="col-6">
-                            <input className="form-control form-control-lg text-center" type="text" placeholder="Apellidos" onChange={(e) => setApellidos(e.target.value)} required />
+                            <input className="form-control form-control-lg text-center" type="text" placeholder="Last Name" onChange={(e) => setApellidos(e.target.value)} required />
                         </div>
 
                         <div className="col-6">
-                            <input className="form-control form-control-lg text-center" type="text" placeholder="Numero de Documento" onChange={(e) => setNumDoc(e.target.value)} required />
+                            <input className="form-control form-control-lg text-center" type="text" placeholder="Document Number" onChange={(e) => setNumDoc(e.target.value)} required />
                         </div>
                     </div>
 
                     <div className="row" style={{ marginTop: 20 }}>
                         <div className="col">
-                            <button className="btn btn-primary btn-lg">Registrar Usuario</button>
+                            <button className="btn btn-primary btn-lg">Register User</button>
                         </div>
                     </div>
                 </form>

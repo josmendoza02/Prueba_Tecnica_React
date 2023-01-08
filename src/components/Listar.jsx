@@ -29,7 +29,8 @@ export const Listar = () => {
         <div className="bg-light" style={{ marginTop: 20, padding: 20 }}>
 
             <div className="h3">
-                Lista de Usuarios Registrados
+            List Of Registered Users
+
             </div>
 
             <div className="table-responsive">
@@ -39,10 +40,10 @@ export const Listar = () => {
                         <thead className="text-center" style={{ background: "yellow" }}>
                             <tr>
                                 <th>#</th>
-                                <th>Nombres</th>
-                                <th>Apellidos</th>
-                                <th>Tipo de Documento</th>
-                                <th>Numero de Documento</th>
+                                <th>Firt Name</th>
+                                <th>Last Name</th>
+                                <th>Document Type</th>
+                                <th>Document Number</th>
                             </tr>
                         </thead>
                         <tbody className="text-center align-baseline">

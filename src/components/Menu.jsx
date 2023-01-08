@@ -1,15 +1,13 @@
-{/*Importamos librerias*/ }
 
-{/* Importamos useState Para controlar las variables de estado*/ }
 import React, { useState } from 'react';
 
-{/*Importamos a los componentes que necesito*/ }
 import { NavLink } from 'react-router-dom';
 import { Registrar } from './Registrar';
 import { Listar } from './Listar';
 import { Eliminar } from './Eliminar';
 
-{/*Importamos la hoja de estilos*/ }
+
+
 import "./styles/Menu.css";
 
 
@@ -33,6 +31,7 @@ el valor inicial que tiene es 0, entonces cuando hacemos click se abre, y las ot
         setLis("0");
         setEli("0");
 
+
     }
     {/*Aca representamos la opcion de listar
 el valor inicial que tiene es 0, entonces cuando hacemos click se abre, y las otras opciones se mantienen cerradas*/ }
@@ -51,6 +50,7 @@ el valor inicial que tiene es 0, entonces cuando hacemos click se abre, y las ot
         setEli("1");
 
 
+
     }
 
 
@@ -59,7 +59,7 @@ el valor inicial que tiene es 0, entonces cuando hacemos click se abre, y las ot
     function cerrarSesion() {
         localStorage.removeItem("usu");
         localStorage.removeItem("miLogin");
-
+        alert("You Logged Out Successfully");
         {/*Aca ocultamos el menu y mostramos el formulario*/ }
         document.getElementById("caja_menu").style.display = "none";
         document.getElementById("form_login").style.display = "block";
@@ -68,6 +68,7 @@ el valor inicial que tiene es 0, entonces cuando hacemos click se abre, y las ot
         document.getElementById("txtusu").value = "";
         document.getElementById("txtpas").value = "";
         document.getElementById("txtpas").focus();
+    
 
     }
 
@@ -81,26 +82,25 @@ el valor inicial que tiene es 0, entonces cuando hacemos click se abre, y las ot
 
                     <strong style={{ fontWeight: "bold", background: "whitesmoke", padding: 15 }} className="h3">
                         {/*Aca obetenmos la propiedad y la mostramos en mayusculas*/}
-                        Bienvenido Usuario : {usu.toUpperCase()}
+                        Welcome: {usu.toUpperCase()}
                     </strong>
 
                     <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ marginTop: 20, padding: 40 }}>
                         <div className="container-fluid">
 
-                            <label className="navbar-brand  h5" href=" ">Menú Principal</label>
+                            <label className="navbar-brand  h5" href=" ">Main Menu</label>
 
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon"></span>
                             </button>
                             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div className="navbar-nav">
-                                    {/*Aca le añadimos la funcion correspondiente a los hipervivulos*/}
+                                    {/*Aca le añadimos la funcion correspondiente a los hipervinculos*/}
 
-                                    <NavLink id="nav-link" to="" className="nav-link  h5  text-center" onClick={op_registrar} >Registrar Usuarios</NavLink>
-                                    <NavLink id="nav-link" to="" className="nav-link  h5  text-center" onClick={op_listar} >Listar Usuarios</NavLink>
-                                    <NavLink id="nav-link" to="" className="nav-link  h5  text-center" onClick={op_eliminar} >Eliminar Usuarios</NavLink>
-
-                                    <a id="nav-link" className="nav-link  h5  text-center" style={{ color: "red" }} href=" " onClick={cerrarSesion}  >Cerrar Sesión</a>
+                                    <NavLink id="nav-link" to="" className="nav-link  h5  text-center" onClick={op_registrar} >Register Users</NavLink>
+                                    <NavLink id="nav-link" to="" className="nav-link  h5  text-center" onClick={op_listar} >To List Users</NavLink>
+                                    <NavLink id="nav-link" to="" className="nav-link  h5  text-center" onClick={op_eliminar} >Delete Users</NavLink>
+                                    <a id="nav-link" className="nav-link  h5  text-center" style={{ color: "red" }} href=" " onClick={cerrarSesion}  >Sign Off</a>
                                 </div>
                             </div>
                         </div>

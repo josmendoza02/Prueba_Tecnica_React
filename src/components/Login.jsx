@@ -1,4 +1,3 @@
-{/*Importamos Librerias a Utilizar*/ }
 import React, { useState } from 'react'
 import { Menu } from './Menu'
 import "./styles/Login.css"
@@ -11,13 +10,10 @@ export const Login = () => {
 
     {/*Aca validamos la sesion para que cuando presionemos F5 No se salga */ }
     const comprobarSesion = () => {
-
         var sesion = localStorage.getItem("miLogin");
         if (sesion) {
             return JSON.parse(sesion);
-
         } else {
-
             return false;
         }
     }
@@ -36,7 +32,7 @@ export const Login = () => {
 
         {/*Si el usuario deja los campos vacios arrojamos un alert*/ }
         if (txtusu.length === 0 || txtpas.length === 0) {
-            alert("Complete los datos faltantes")
+            alert("Fill In The Missing Data")
             {/*Aca validamos si ya tenemos contenido en los input*/ }
         } else {
             {/*Aca validamos si el usuario es admin y la contraseña es 123. de ser así puede entrar*/ }
@@ -46,10 +42,10 @@ export const Login = () => {
                 setLogin(true);
 
                 localStorage.setItem("miLogin", true);
+
                 {/*Con esto guardamos le nombre de usuario para poder mostrarlo*/ }
                 localStorage.setItem("usu", usu);
                 document.getElementById("form_login").style.display = "none";
-
 
             } else {
                 {/*Si no es así mostramos un alert*/ }
@@ -82,7 +78,7 @@ export const Login = () => {
                         <label htmlFor="txtpas"><strong>Password</strong></label>
                         <input autoComplete='off' className="input" type="password" id="txtpas" onChange={(e) => setPas(e.target.value)} required />
                     </div><br />
-                    <input id="login_bottom" type="submit" value="Iniciar Sesión" onClick={iniciarSesion} />
+                    <input id="login_bottom" type="submit" value="Log in" onClick={iniciarSesion} />
                 </form>
 
 

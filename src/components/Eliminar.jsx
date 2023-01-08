@@ -41,7 +41,7 @@ export const Eliminar = () => {
         <div className="bg-light" style={{ marginTop: 20, padding: 20 }}>
 
             <div className="h3">
-                Eliminar Usuarios
+                Delete Users
             </div>
 
             <div className="table-responsive">
@@ -51,11 +51,11 @@ export const Eliminar = () => {
                         <thead className="text-center" style={{ background: "yellow" }}>
                             <tr>
                                 <th>#</th>
-                                <th>Nombres</th>
-                                <th>Apellidos</th>
-                                <th>Tipo de Documento</th>
-                                <th>Numero de Documento</th>
-                                <th>Eliminar</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th> Document Type</th>
+                                <th>Document Number</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody className="text-center align-baseline">
